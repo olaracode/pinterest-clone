@@ -5,33 +5,37 @@ import textLanding from "../public/assets/utils/landingText";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const [repeat, setRepeat] = useState(0);
   let [currentItem, setCurrentItem] = useState(0);
-  const animations = {
-    exit: {
-      y: ["0px", "-60px"],
-      opacity: [1, 0],
-    },
+  let animations = {
     entry: {
-      y: ["60px", "0px"],
+      y: [100, 0],
       opacity: [0, 1],
     },
-  };
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
+    exit: {
+      y: [0, -100],
+      opacity: [1, 0],
     },
   };
+
+  let [currentAnimation, setCurrentAnimation] = useState("entry");
+
+  useEffect(() => {
+    let landingAnimation = setInterval(() => {
+      if (currentAnimation === "exit") {
+        setCurrentAnimation("entry");
+      }
+      setTimeout(() => {
+        setCurrentAnimation("exit");
+      }, 3000);
+      if (currentItem === textLanding.length - 1) {
+        setCurrentItem(0);
+      } else {
+        setCurrentItem(currentItem + 1);
+      }
+    }, 4000);
+    return () => clearInterval(landingAnimation);
+  });
+
   return (
     <>
       <Navbar />
@@ -47,18 +51,19 @@ export default function Home() {
             fontSize={{ base: "24px", md: "42px", lg: "60px" }}
             fontWeight="semibold"
           >
-            Encuentra la proxima
+            Find the next
           </Text>
-          <Text
-            as={motion.p}
-            fontSize={{ base: "24px", md: "42px", lg: "60px" }}
-            color={textLanding[0].color}
-            fontWeight="medium"
-            variants={list}
-            animate="visible"
-          >
-            {textLanding[currentItem].title}
-          </Text>
+            <Text
+              as={motion.p}
+              fontSize={{ base: "24px", md: "42px", lg: "60px" }}
+              color={textLanding[currentItem].color}
+              fontWeight="medium"
+              variants={animations}
+              animate={currentAnimation === "entry" ? animations.entry : animations.exit }
+            >
+              {textLanding[currentItem].title}
+            </Text>
+
         </Box>
       </Flex>
     </>

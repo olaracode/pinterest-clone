@@ -1,14 +1,14 @@
 const textLanding = [
     {
-        title: "modelo para un nuevo look",
+        title: "idea for the weekend",
         color: "#0078d3"
     },
     {
-        title: "truco de jardineria",
+        title: "gardening trick",
         color: "#407a57"
     },
     {
-        title: "ideas para la cena de la semana",
+        title: "art project inspiration",
         color: "#c28b00"
     }
 ]

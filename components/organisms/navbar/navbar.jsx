@@ -6,7 +6,6 @@ const Navbar = () => {
   const logo = "/assets/imgs/plogo.png";
   return (
     <Box w="100%">
-      {/* DESKTOP NAVBAR */}
       <Flex mx="2%" my={"1%"} justifyContent="space-between" alignItems="center" display={{base: "none", md: "flex"}}>
         <Image src={logo} height="60px" cursor="pointer"/>
         <Flex alignItems="center" gap="6">
@@ -20,15 +19,10 @@ const Navbar = () => {
             Blog
           </Text>
           <Flex gap={2}>
-            <CustomButton content="Inicia Sesión" bgColor={"main"} fontWeight="bold"/>
-            <CustomButton content="Registrate" bgColor={"secondary"} fontWeight="bold" />
+            <CustomButton content="Inicia Sesión" bgColor={"main"} fontWeight="bold" tap={true}/>
+            <CustomButton content="Registrate" bgColor={"secondary"} fontWeight="bold" tap={true}/>
           </Flex>
         </Flex>
-      </Flex>
-      {/* END DESKTOP NAVBAR */}
-
-      <Flex mx="2%">
-
       </Flex>
     </Box>
   );

@@ -8,7 +8,7 @@ const textLanding = [
         color: "#c28b00"
     },
     {
-        title: "idea for the weekend",
+        title: "art project idea",
         color: "#0078d3"
     },
   

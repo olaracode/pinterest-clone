@@ -46,11 +46,10 @@ const LandingAnimations = () => {
     }, 4000);
     return () => clearInterval(landingAnimation);
   });
-  console.log(landingAnimatedImgs);
   return (
     <Flex
       margin="2% 0"
-      height="70vh"
+      height={{ base: "80vh", lg: "70vh" }}
       alignItems="center"
       justifyContent="center"
     >
@@ -80,15 +79,15 @@ const LandingAnimations = () => {
       </Box>
       <Flex
         position="absolute"
-        gap={8}
-        justifyContent="space-between"
+        gap={100}
         zIndex={0}
+        justifyContent="center"
         top={"40vh"}
-        w="115vw"
         alignItems="start"
         overflowX="hidden"
+        maxW={"100vw"}
       >
-        <Flex gap={4} alignItems="start">
+        <Flex gap={4} alignItems="start" display={{ base: "none", md: "flex" }}>
           {/* Left side */}
 
           <AnimatedImage
@@ -132,7 +131,7 @@ const LandingAnimations = () => {
         h="300px"
         zIndex={100}
         position="absolute"
-        top="78vh"
+        top={{ base: "85vh", md: "78vh" }}
         display="flex"
         justifyContent="center"
       >

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AnimatedImage = ({ img, img2, position, currentAnimation }) => {
   let margin =
     position === "center" ? "15%" : position === "inner" ? "30%" : "0%";
-  let delay = position === "center" ? 0.2 : position === "inner" ? 0.4 : 0;
+  let delay = position === "center" ? 0.2 : position === "inner" ? 0.3 : 0;
   let animations = {
     entry: {
       y: [100, 0],
@@ -34,7 +34,6 @@ const AnimatedImage = ({ img, img2, position, currentAnimation }) => {
       {img2 ? (
         <Flex direction={"column"}>
           <Image
-          display={{sm: "none", xs: "none"}}
             zIndex={0}
             borderRadius="20px"
             w={{ base: "200", lg: "252px" }}
@@ -42,7 +41,6 @@ const AnimatedImage = ({ img, img2, position, currentAnimation }) => {
             alt=""
           />
           <Image
-          display={{sm: "none", xs: "none"}}
             zIndex={0}
             borderRadius="20px"
             w={{ base: "200", lg: "252px" }}
@@ -53,7 +51,6 @@ const AnimatedImage = ({ img, img2, position, currentAnimation }) => {
         </Flex>
       ) : (
         <Image
-        display={{sm: "none", xs: "none"}}
           zIndex={0}
           borderRadius="20px"
           w={{ base: "200", lg: "252px" }}

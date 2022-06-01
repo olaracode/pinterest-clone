@@ -28,6 +28,9 @@ export default function Home() {
           </Text>
           <FontAwesomeIcon icon={faAngleDown} />
         </Flex>
+        <Box>
+          
+        </Box>
       </Box>
     </>
   );

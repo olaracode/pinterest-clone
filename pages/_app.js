@@ -4,7 +4,7 @@ import Navbar from '../components/organisms/navbar/navbar'
 
 function MyApp({ Component, pageProps }) {
   return (
-  <ChakraProvider>
+  <ChakraProvider overflowX={"hidden"}>
     <Component {...pageProps} />
   </ChakraProvider>
 )}

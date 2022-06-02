@@ -1,0 +1,46 @@
+const landingAnimatedImgs = [
+  [
+    [
+      "/assets/imgs/landing/nature/img1.jpg",
+      "/assets/imgs/landing/nature/img6.jpg",
+      "/assets/imgs/landing/nature/img2.jpg",
+      "/assets/imgs/landing/nature/img3.jpg",
+    ],
+    [
+      "/assets/imgs/landing/nature/img4.jpg",
+      "/assets/imgs/landing/nature/img5.jpg",
+      "/assets/imgs/landing/nature/img6.jpg",
+      "/assets/imgs/landing/nature/img1.jpg",
+    ],
+  ],
+  [
+    [
+      "/assets/imgs/landing/mode/img1.jpg",
+      "/assets/imgs/landing/mode/img6.jpg",
+      "/assets/imgs/landing/mode/img2.jpg",
+      "/assets/imgs/landing/mode/img3.jpg",
+    ],
+    [
+      "/assets/imgs/landing/mode/img4.jpg",
+      "/assets/imgs/landing/mode/img5.jpg",
+      "/assets/imgs/landing/mode/img6.jpg",
+      "/assets/imgs/landing/mode/img1.jpg",
+    ],
+  ],
+  [
+    [
+      "/assets/imgs/landing/diy/img1.jpg",
+      "/assets/imgs/landing/diy/img6.jpg",
+      "/assets/imgs/landing/diy/img2.jpg",
+      "/assets/imgs/landing/diy/img3.jpg",
+    ],
+    [
+      "/assets/imgs/landing/diy/img4.jpg",
+      "/assets/imgs/landing/diy/img5.jpg",
+      "/assets/imgs/landing/diy/img6.jpg",
+      "/assets/imgs/landing/diy/img2.jpg",
+    ],
+  ],
+];
+
+export default landingAnimatedImgs;

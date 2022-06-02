@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Image, Box, Text, Button } from "@chakra-ui/react";
-import CustomButton from "../../atoms/CustomButton";
+import CustomButton from "@/atoms/CustomButton";
 
 const Navbar = () => {
   const logo = "/assets/imgs/plogo.png";

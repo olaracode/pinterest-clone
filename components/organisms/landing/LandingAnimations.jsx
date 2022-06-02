@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Text, Flex, Image, Button } from "@chakra-ui/react";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import textLanding from "../../../public/assets/utils/landingText";
-import AnimatedImage from "../../molecules/AnimatedImage";
-import landingAnimatedImgs from "../../../public/assets/utils/landingAnimatedImgs";
+import textLanding from "@/utils/landingText";
+import AnimatedImage from "@/molecules/AnimatedImage";
+import landingAnimatedImgs from "@/utils/landingAnimatedImgs";
+
+
 const LandingAnimations = () => {
   let [currentItem, setCurrentItem] = useState(0);
   let buttonAnimation = {
@@ -30,6 +32,8 @@ const LandingAnimations = () => {
 
   let [currentAnimation, setCurrentAnimation] = useState("entry");
 
+
+  // Animation Interval Function
   useEffect(() => {
     let landingAnimation = setInterval(() => {
       if (currentAnimation === "exit") {
@@ -37,15 +41,17 @@ const LandingAnimations = () => {
       }
       setTimeout(() => {
         setCurrentAnimation("exit");
-      }, 3000);
+      }, 2000);
       if (currentItem === textLanding.length - 1) {
         setCurrentItem(0);
       } else {
         setCurrentItem(currentItem + 1);
       }
-    }, 4000);
+    }, 3000);
     return () => clearInterval(landingAnimation);
   });
+
+
   return (
     <Flex
       margin="2% 0"
@@ -69,6 +75,7 @@ const LandingAnimations = () => {
           fontSize={{ base: "24px", md: "42px", lg: "60px" }}
           color={textLanding[currentItem].color}
           fontWeight="medium"
+          overflowY={"hidden"}
           variants={animations}
           animate={
             currentAnimation === "entry" ? animations.entry : animations.exit
@@ -85,22 +92,26 @@ const LandingAnimations = () => {
         top={"40vh"}
         alignItems="start"
         overflowX="hidden"
+        overflowY="hidden"
         maxW={"100vw"}
       >
         <Flex gap={4} alignItems="start" display={{ base: "none", md: "flex" }}>
           {/* Left side */}
 
           <AnimatedImage
+            delay={0}
             img={landingAnimatedImgs[currentItem][0][0]}
             currentAnimation={currentAnimation}
             img2={landingAnimatedImgs[currentItem][0][1]}
           />
           <AnimatedImage
+            delay={0.1}
             img={landingAnimatedImgs[currentItem][0][1]}
             currentAnimation={currentAnimation}
             position="center"
           />
           <AnimatedImage
+            delay={0.2}
             img={landingAnimatedImgs[currentItem][0][2]}
             currentAnimation={currentAnimation}
             position="inner"
@@ -110,16 +121,19 @@ const LandingAnimations = () => {
         {/* Right side */}
         <Flex gap={4} alignItems="start">
           <AnimatedImage
+            delay={0.3}
             img={landingAnimatedImgs[currentItem][1][2]}
             currentAnimation={currentAnimation}
             position="inner"
           />
           <AnimatedImage
+            delay={0.4}
             img={landingAnimatedImgs[currentItem][1][1]}
             currentAnimation={currentAnimation}
             position="center"
           />
           <AnimatedImage
+            delay={0.5}
             img={landingAnimatedImgs[currentItem][1][0]}
             currentAnimation={currentAnimation}
             img2={landingAnimatedImgs[currentItem][1][1]}

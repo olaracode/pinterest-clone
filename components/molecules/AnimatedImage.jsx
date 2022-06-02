@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-const AnimatedImage = ({ img, img2, position, currentAnimation }) => {
+const AnimatedImage = ({ img, img2, position, currentAnimation, delay }) => {
   let margin =
     position === "center" ? "15%" : position === "inner" ? "30%" : "0%";
-  let delay = position === "center" ? 0.2 : position === "inner" ? 0.3 : 0;
   let animations = {
     entry: {
       y: [100, 0],
@@ -24,6 +23,7 @@ const AnimatedImage = ({ img, img2, position, currentAnimation }) => {
   return (
     <Box
       w={"252px"}
+      maxH={"500px"}
       mt={margin}
       as={motion.div}
       variants={animations}

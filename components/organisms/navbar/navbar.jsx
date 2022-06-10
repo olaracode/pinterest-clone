@@ -55,7 +55,7 @@ const Navbar = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex justifyContent="center" display={{ base: "flex", md: "none" }}>
+      <Flex justifyContent="center" display={{ base: "none", md: "none" }}>
         <Image src={logo} height="60px" cursor="pointer" />
       </Flex>
     </Box>

@@ -41,13 +41,13 @@ const LandingAnimations = () => {
       }
       setTimeout(() => {
         setCurrentAnimation("exit");
-      }, 2000);
+      }, 3700);
       if (currentItem === textLanding.length - 1) {
         setCurrentItem(0);
       } else {
         setCurrentItem(currentItem + 1);
       }
-    }, 3000);
+    }, 4000);
     return () => clearInterval(landingAnimation);
   });
 
@@ -56,6 +56,7 @@ const LandingAnimations = () => {
     <Flex
       margin="2% 0"
       height={{ base: "80vh", lg: "70vh" }}
+      display={{base: "none", md: "flex"}}
       alignItems="center"
       justifyContent="center"
     >
@@ -95,7 +96,7 @@ const LandingAnimations = () => {
         overflowY="hidden"
         maxW={"100vw"}
       >
-        <Flex gap={4} alignItems="start" display={{ base: "none", md: "flex" }}>
+        <Flex gap={4} alignItems="start">
           {/* Left side */}
 
           <AnimatedImage

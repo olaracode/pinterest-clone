@@ -1,30 +1,51 @@
 import React from "react";
-import { Text, Button } from "@chakra-ui/react";
+import { Text, Button, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
-const CustomButton = ({ content, tap, ...props }) => {
-  let bgColor =
-    props.bgColor && props.bgColor === "main"
+/**
+ *
+ * @param {*}
+ *  content<string>: Button Text
+ *  bgColor<string>: HexColor || variant["main", "secondary"]
+ *  ftColor<string>: HexColor
+ *  icon<string || faIcon>:
+ * @returns custom button
+ */
+
+const CustomButton = ({ content, bgColor, icon, ftColor, ...props }) => {
+  let bgColorHex =
+    bgColor && bgColor === "main"
       ? "#e60023"
-      : props.bgColor === "secondary"
+      : bgColor === "secondary"
       ? "#efefef"
-      : props.bgColor;
+      : bgColor === "fb"
+      ? "#1877f2"
+      : bgColor;
 
-  let ftColor = props.ftColor
-    ? props.ftColor
-    : props.bgColor === "main" && "white";
+  let ftColorHex = ftColor
+    ? ftColor
+    : bgColor === "main" ? "white" : bgColor === "fb" && "white";
 
+  let buttonIcon =
+    icon && icon === "fb" ? faFacebook : icon === "gg" ? faGoogle : icon;
   return (
     <Button
       as={motion.button}
       {...props}
-      bg={bgColor}
+      bg={bgColorHex}
       borderRadius="100px"
       _hover={{ filter: "brightness(0.8)" }}
       _focus={{ border: "none" }}
       whileTap={{ scale: [1.005, 1] }}
     >
-      <Text as="p" fontSize={16} color={ftColor}>
+      {icon && (
+        <Box mr={1}>
+          <FontAwesomeIcon icon={buttonIcon} color={ftColorHex} />
+        </Box>
+      )}
+      <Text as="p" fontSize={16} color={ftColorHex} {...props}>
         {content}
       </Text>
     </Button>

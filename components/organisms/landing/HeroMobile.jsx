@@ -17,7 +17,7 @@ const HeroMobile = () => {
       >
         {heroImgs.map((img, index) => {
           return (
-            <GridItem>
+            <GridItem key="index">
               <RoundedImage src={img} variant={"landing"} key={index} />
             </GridItem>
           );
@@ -68,11 +68,7 @@ const HeroMobile = () => {
             </Text>
           </Box>
         </Flex>
-        <Text
-          color="white"
-          fontSize={16}
-          textAlign="center"  
-        >
+        <Text color="white" fontSize={16} textAlign="center">
           Representas a una empresa? Empieza aquí
         </Text>
       </Flex>

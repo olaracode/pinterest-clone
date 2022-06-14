@@ -71,8 +71,8 @@ export default function Home() {
                   </Text>
                   <Text w="320px" my={5} color="#c31952">
                     ¿Qué es lo siguiente que quieres probar? Piensa en algo que
-                    te interese, como "receta sencilla de pollo para cenar", y a
-                    ver qué descubres.
+                    te interese, como &quotreceta sencilla de pollo para
+                    cenar&quot, y a ver qué descubres.
                   </Text>
                   <CustomButton
                     content="Explora"

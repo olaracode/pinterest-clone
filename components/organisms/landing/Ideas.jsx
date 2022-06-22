@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import CustomButton from "@/atoms/CustomButton";
 import "swiper/css"; // Swiper styles
+
 // #006a6c  for the buttons
 // #dafef6 for the background
 
@@ -31,13 +32,15 @@ const Ideas = () => {
           <Text as="h2" my="6" fontSize="1rem" textAlign={"center"}>
             Save everything you like for easy access later on
           </Text>
-          <CustomButton
-            content="Explore"
-            bgColor={"#006a6c"}
-            color="#ffffff"
-            fontWeight="bold"
-            w="100%"
-          />
+          <Flex justify="center">
+            <CustomButton
+              content="Explore"
+              bgColor={"#006a6c"}
+              color="#ffffff"
+              fontWeight="bold"
+              w="80%"
+            />
+          </Flex>
         </Box>
         <Box maxW="360px">
           <Swiper

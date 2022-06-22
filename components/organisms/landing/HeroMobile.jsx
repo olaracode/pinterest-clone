@@ -1,8 +1,9 @@
 import React from "react";
+import { Flex, Grid, GridItem, Image, Text, Box } from "@chakra-ui/react";
 import heroImgs from "@/utils/heroImgs";
 import RoundedImage from "@/atoms/RoundedImage";
-import { Flex, Grid, GridItem, Image, Text, Box } from "@chakra-ui/react";
 import CustomButton from "@/atoms/CustomButton";
+
 const HeroMobile = () => {
   const logo = "/assets/imgs/herologo.png";
   return (

@@ -26,7 +26,9 @@ const CustomButton = ({ content, bgColor, icon, ftColor, ...props }) => {
 
   let ftColorHex = ftColor
     ? ftColor
-    : bgColor === "main" ? "white" : bgColor === "fb" && "white";
+    : bgColor === "main"
+    ? "white"
+    : bgColor === "fb" && "white";
 
   let buttonIcon =
     icon && icon === "fb" ? faFacebook : icon === "gg" ? faGoogle : icon;

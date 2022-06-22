@@ -13,7 +13,7 @@ const Navbar = () => {
         alignItems="center"
         display={{ base: "none", md: "flex" }}
       >
-        <Image src={logo} height="60px" cursor="pointer" />
+        <Image src={logo} height="60px" cursor="pointer" alt="logo" />
         <Flex alignItems="center" gap="6">
           <Text
             fontSize="16px"
@@ -29,7 +29,7 @@ const Navbar = () => {
             cursor="pointer"
             _hover={{ textDecoration: "underline" }}
           >
-            Empresa
+            Company
           </Text>
           <Text
             fontSize="16px"
@@ -41,13 +41,13 @@ const Navbar = () => {
           </Text>
           <Flex gap={2}>
             <CustomButton
-              content="Inicia Sesión"
+              content="Login"
               bgColor={"main"}
               fontWeight="bold"
               tap={true}
             />
             <CustomButton
-              content="Registrate"
+              content="Register"
               bgColor={"secondary"}
               fontWeight="bold"
               tap={true}
@@ -56,7 +56,7 @@ const Navbar = () => {
         </Flex>
       </Flex>
       <Flex justifyContent="center" display={{ base: "none", md: "none" }}>
-        <Image src={logo} height="60px" cursor="pointer" />
+        <Image src={logo} height="60px" cursor="pointer" alt="logo" />
       </Flex>
     </Box>
   );

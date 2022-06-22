@@ -5,6 +5,7 @@ import Navbar from "@/organisms/navbar/navbar";
 import LandingAnimations from "@/organisms/landing/LandingAnimations";
 import HeroMobile from "@/organisms/landing/HeroMobile";
 import Preview from "@/organisms/landing/Preview";
+import Ideas from "@/organisms/landing/Ideas";
 export default function Home() {
   return (
     <Box bg={{ base: "black", md: "white" }}>
@@ -12,6 +13,7 @@ export default function Home() {
       <LandingAnimations />
       <HeroMobile />
       <Preview />
+      <Ideas />
     </Box>
   );
 }

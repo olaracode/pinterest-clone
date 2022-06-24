@@ -13,7 +13,7 @@ const Diy = () => {
       <Grid
         templateColumns={{ base: "1", lg: "repeat(2, 1fr)" }}
         minH="100vh"
-        pb="30px"
+        pb={{ base: "30px", md: "0px" }}
       >
         <GridItem
           bgImage={"/assets/imgs/landing/makeup/img1.jpeg"}

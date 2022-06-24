@@ -42,7 +42,7 @@ const Ideas = () => {
             />
           </Flex>
         </Box>
-        <Box maxW="360px">
+        <Box maxW={{ base: "360px", lg: "420px" }}>
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -52,7 +52,7 @@ const Ideas = () => {
             <SwiperSlide>
               <Image
                 borderRadius="3xl"
-                h="420px"
+                h={{ base: "420px", lg: "600px" }}
                 w="100%"
                 src="/assets/imgs/landing/mode/img1.jpg"
                 alt=""

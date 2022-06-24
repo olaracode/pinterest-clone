@@ -44,8 +44,8 @@ const Preview = () => {
           <Flex
             id={"hiw"}
             bgImg="/assets/imgs/landing/food/img1.jpg"
-            w="360px"
-            h="400px"
+            w={{ base: "360px", lg: "450px" }}
+            h={{ base: "420px", lg: "600px" }}
             align="center"
             justify="center"
             borderRadius="8px"

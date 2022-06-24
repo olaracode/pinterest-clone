@@ -7,6 +7,7 @@ import {
   Preview,
   HeroMobile,
   LandingAnimations,
+  LandingLogin,
 } from "@/organisms/landing/";
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Preview />
       <Ideas />
       <Diy />
+      <LandingLogin />
     </Box>
   );
 }

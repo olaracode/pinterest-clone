@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Grid, GridItem, Image, Text, Box } from "@chakra-ui/react";
-import heroImgs from "@/utils/heroImgs";
+import { heroImgs } from "@/utils/heroImgs";
 import RoundedImage from "@/atoms/RoundedImage";
 import CustomButton from "@/atoms/CustomButton";
 
@@ -33,26 +33,26 @@ const HeroMobile = () => {
         align="center"
       >
         <Flex direction={"column"} justify="center" align={"center"} w={"70%"}>
-          <Image src={logo} w={"40px"} h={"40px"} />
+          <Image src={logo} w={"40px"} h={"40px"} alt="logo" />
           <Text fontSize={"5xl"} textAlign="center" color="white">
             Welcome to pinterest
           </Text>
           <Box mt={8}>
             <CustomButton
-              content="Login with email"
+              content="Register with email"
               bgColor="main"
               w={"100%"}
               my={1}
             />
             <CustomButton
-              content="Login using google"
+              content="Register using google"
               bgColor="secondary"
               w={"100%"}
               my={1}
               icon={"gg"}
             />
             <CustomButton
-              content="Login using facebook"
+              content="Register using facebook"
               bgColor="fb"
               w={"100%"}
               my={1}
@@ -65,7 +65,10 @@ const HeroMobile = () => {
               textAlign="center"
               my={6}
             >
-              Ya eres un miembro, inicia sesión
+              Ya eres un miembro,{" "}
+              <Text color="#e60023" as="span">
+                inicia sesión
+              </Text>
             </Text>
           </Box>
         </Flex>

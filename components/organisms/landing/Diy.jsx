@@ -10,7 +10,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Diy = () => {
   return (
     <Box minH="100vh" backgroundColor="#ffe2eb">
-      <Grid templateColumns={{ base: "1", lg: "repeat(2, 1fr)" }} h="100vh">
+      <Grid
+        templateColumns={{ base: "1", lg: "repeat(2, 1fr)" }}
+        minH="100vh"
+        pb="30px"
+      >
         <GridItem
           bgImage={"/assets/imgs/landing/makeup/img1.jpeg"}
           bgSize="cover"

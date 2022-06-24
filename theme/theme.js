@@ -1,6 +1,6 @@
-import { extendedTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 
-const theme = extendedTheme({
+export const theme = extendTheme({
   colors: {
     brand: {
       main: "#e60023",

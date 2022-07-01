@@ -18,7 +18,7 @@ const HeroMobile = () => {
       >
         {heroImgs.map((img, index) => {
           return (
-            <GridItem key="index">
+            <GridItem key={`${index}`}>
               <RoundedImage src={img} variant={"landing"} key={index} />
             </GridItem>
           );

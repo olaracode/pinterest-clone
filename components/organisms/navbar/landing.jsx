@@ -1,39 +1,7 @@
-import React, { useState } from "react";
-import {
-  Flex,
-  Image,
-  Box,
-  Text,
-  Button,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  Lorem,
-} from "@chakra-ui/react";
+import React from "react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import CustomButton from "@/atoms/CustomButton";
-import { RegisterCard, LoginCard } from "@/molecules/auth";
-const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [currentModal, setCurrentModal] = useState(null);
-  const logo = "/assets/imgs/plogo.png";
-  const handleSwap = () => {
-    if (currentModal === "register") {
-      setCurrentModal("login");
-      return currentModal;
-    } else {
-      setCurrentModal("register");
-      return currentModal;
-    }
-  };
-  const modalOpener = (current) => {
-    setCurrentModal(current);
-    onOpen();
-  };
+const landing = () => {
   return (
     <>
       <Box w="100%">
@@ -107,4 +75,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default landing;

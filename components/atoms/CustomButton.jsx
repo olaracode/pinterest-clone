@@ -44,7 +44,10 @@ const CustomButton = ({ content, bgColor, icon, ftColor, ...props }) => {
     >
       {icon && (
         <Box mr={1}>
-          <FontAwesomeIcon icon={buttonIcon} color={ftColorHex} />
+          <FontAwesomeIcon
+            icon={buttonIcon}
+            color={ftColorHex ? ftColorHex : null}
+          />
         </Box>
       )}
       <Text as="p" fontSize={16} color={ftColorHex} {...props}>

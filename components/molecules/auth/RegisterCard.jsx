@@ -5,22 +5,23 @@ import { useRouter } from "next/router";
 import CustomInputs from "@/atoms/CustomInputs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-const LoginCard = () => {
+const LoginCard = ({ isModal, swap }) => {
   const toast = useToast();
   const router = useRouter();
-  const handleToast = (text) => {
+  const handleToast = () => {
     toast({
       title: "Oops something went wrong ",
 
-      description: text,
+      description: "Backend in progress",
       status: "info",
     });
   };
+
   return (
     <Flex
       shadow={"lg"}
-      w="320px"
-      borderRadius="30px"
+      w={isModal ? "100%" : { base: "320px", lg: "420px" }}
+      borderRadius={isModal ? "30px" : "30px"}
       p="5"
       bgColor={"white"}
       direction="column"
@@ -47,7 +48,7 @@ const LoginCard = () => {
           bgColor="main"
           w={"100%"}
           my={1}
-          onClick={() => handleToast("Backend in progress")}
+          onClick={handleToast}
         />
         <Flex align={"center"} gap={" 3"}>
           <Divider color="black" orientation="horizontal" />
@@ -60,7 +61,7 @@ const LoginCard = () => {
           w={"100%"}
           my={1}
           icon={"gg"}
-          onClick={() => handleToast("Backend in progress")}
+          onClick={handleToast}
         />
         <CustomButton
           content="Register using facebook"
@@ -68,7 +69,7 @@ const LoginCard = () => {
           w={"100%"}
           my={1}
           icon={"fb"}
-          onClick={() => handleToast("Backend in progress")}
+          onClick={handleToast}
         />
         <Text
           color="black"
@@ -78,7 +79,7 @@ const LoginCard = () => {
           my={6}
         >
           Ya eres un miembro,{" "}
-          <Text color="#e60023" as="span">
+          <Text color="#e60023" as="span" cursor="pointer" onClick={swap}>
             inicia sesión
           </Text>
         </Text>

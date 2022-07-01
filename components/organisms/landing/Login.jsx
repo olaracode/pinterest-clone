@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, GridItem, Box, Text, Image, useToast } from "@chakra-ui/react";
 import { loginMasonrys } from "@/utils/heroImgs";
 import { useRouter } from "next/router";
-import LoginCard from "@/molecules/LoginCard";
+import { RegisterCard } from "@/molecules/auth";
 const Login = () => {
   const toast = useToast();
   const router = useRouter();
@@ -41,7 +41,7 @@ const Login = () => {
         </Text>
       </GridItem>
       <GridItem position={"relative"} zIndex="999">
-        <LoginCard />
+        <RegisterCard />
       </GridItem>
       <Box
         padding={4}

@@ -12,7 +12,6 @@ import {
 export default function Home() {
   return (
     <Box bg={{ base: "black", md: "white" }}>
-      <Navbar />
       <LandingAnimations />
       <HeroMobile />
       <Preview />

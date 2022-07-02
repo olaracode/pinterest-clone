@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Flex, Text, Grid, GridItem } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import CustomButton from "@/atoms/CustomButton";
+import CustomButton from "@/atoms/btns";
 import RoundedImage from "@/atoms/RoundedImage";
 import { useRouter } from "next/router";
 const Preview = () => {
@@ -52,7 +52,7 @@ const Preview = () => {
           >
             <Flex
               p="4"
-              backgroundColor="white"
+              backgroundColor="brand.50"
               borderRadius="100px"
               gap={3}
               align="center"

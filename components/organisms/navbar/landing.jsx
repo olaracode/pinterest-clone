@@ -1,7 +1,34 @@
-import React from "react";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import CustomButton from "@/atoms/CustomButton";
-const landing = () => {
+import React, { useState } from "react";
+import {
+  Box,
+  Flex,
+  Image,
+  Text,
+  Modal,
+  useDisclosure,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+} from "@chakra-ui/react";
+import { LoginCard } from "@/molecules/auth";
+import { CustomButton } from "@/atoms/btns";
+const Landing = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [currentModal, setCurrentModal] = useState(null);
+  const logo = "/assets/imgs/plogo.png";
+  const handleSwap = () => {
+    if (currentModal === "register") {
+      setCurrentModal("login");
+      return currentModal;
+    } else {
+      setCurrentModal("register");
+      return currentModal;
+    }
+  };
+  const modalOpener = (current) => {
+    setCurrentModal(current);
+    onOpen();
+  };
   return (
     <>
       <Box w="100%">
@@ -75,4 +102,4 @@ const landing = () => {
   );
 };
 
-export default landing;
+export default Landing;

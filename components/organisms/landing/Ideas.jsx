@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import CustomButton from "@/atoms/CustomButton";
+import CustomButton from "@/atoms/btns";
 import "swiper/css"; // Swiper styles
 
 // #006a6c  for the buttons
@@ -36,7 +36,7 @@ const Ideas = () => {
             <CustomButton
               content="Explore"
               bgColor={"#006a6c"}
-              color="#ffffff"
+              color="brand.50"
               fontWeight="bold"
               w="80%"
             />

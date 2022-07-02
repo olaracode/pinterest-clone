@@ -8,6 +8,7 @@
         "@/imgs/*": ["public/assets/imgs/*"],
         "@/utils/*": ["public/assets/utils/*"],
         "@/store/*": ["store/*"],
+        "@/consts/*": ["consts/*"]
       }
     }
   }

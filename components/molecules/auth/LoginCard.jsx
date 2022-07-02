@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Flex, Image, Box, Text, useToast, Divider } from "@chakra-ui/react";
-import CustomButton from "@/atoms/CustomButton";
+import { CustomButton } from "@/atoms/btns";
 import { useRouter } from "next/router";
 import CustomInputs from "@/atoms/CustomInputs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +8,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const LoginCard = ({ isModal, swap, onClose }) => {
   const toast = useToast();
   const router = useRouter();
-  const { username, setUsername } = useState("");
+  const [username, setUsername] = useState("");
   const handleToast = () => {
     toast({
       title: "Oops something went wrong ",
@@ -35,7 +35,7 @@ const LoginCard = ({ isModal, swap, onClose }) => {
       w={isModal ? "100%" : { base: "320px", lg: "420px" }}
       borderRadius={isModal ? "30px" : "30px"}
       p="5"
-      bgColor={"white"}
+      bgColor={"brand.50"}
       direction="column"
       align="center"
       gap="2"
@@ -94,7 +94,12 @@ const LoginCard = ({ isModal, swap, onClose }) => {
           my={6}
         >
           Dont haven and account already?
-          <Text color="#e60023" as="span" cursor="pointer" onClick={swap}>
+          <Text
+            color="brand.primary.100"
+            as="span"
+            cursor="pointer"
+            onClick={swap}
+          >
             {" "}
             Register Now
           </Text>

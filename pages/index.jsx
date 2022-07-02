@@ -11,7 +11,7 @@ import {
 } from "@/organisms/landing/";
 export default function Home() {
   return (
-    <Box bg={{ base: "black", md: "white" }}>
+    <Box bg={{ base: "black", md: "brand.50" }}>
       <LandingAnimations />
       <HeroMobile />
       <Preview />

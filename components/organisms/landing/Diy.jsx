@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, GridItem, Flex, Text, Image } from "@chakra-ui/react";
-import CustomButton from "@/atoms/CustomButton";
+import CustomButton from "@/atoms/btns";
 import {
   faAngleLeft,
   faEllipsis,
@@ -50,17 +50,17 @@ const Diy = () => {
                   h="50px"
                   src={"/assets/imgs/landing/makeup/img3.jpeg"}
                   bgSize="cover"
-                  border="1.5px solid white"
+                  border="1.5px solid brand.50"
                   alt="profile"
                 />
                 <Box mt="20px" ml="6px">
-                  <Text color="white" fontWeight={"bold"}>
+                  <Text color="brand.50" fontWeight={"bold"}>
                     Sydney MakeUp
                   </Text>
                   <Text
                     fontWeight={"normal"}
                     fontSize="0.8rem"
-                    color="white"
+                    color="brand.50"
                     whiteSpace={"nowrap"}
                   >
                     16,800,000 followers
@@ -78,7 +78,7 @@ const Diy = () => {
                 fontSize="3rem"
                 textAlign={"center"}
                 fontWeight="bold"
-                color="#e60023"
+                color="brand.primary.100"
               >
                 Look it, make it, try it, do it
               </Text>
@@ -87,7 +87,7 @@ const Diy = () => {
                 my="6"
                 fontSize="1rem"
                 textAlign={"center"}
-                color="#e60023"
+                color="brand.primary.100"
               >
                 The best thing about pinterest is discovering new ideas, things,
                 places, inspiration of people from all around the world

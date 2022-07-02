@@ -20,7 +20,7 @@ const Login = () => {
       position="relative"
       //   display={{ base: "none", md: "grid" }}
       minH="100vh"
-      backgroundColor="white"
+      backgroundColor="brand.50"
       placeItems={"center"}
       templateColumns={{ base: "1", md: "repeat(2, 1fr)" }}
       py="30px"
@@ -32,7 +32,7 @@ const Login = () => {
       >
         <Text
           fontSize="6xl"
-          color="white"
+          color="brand.50"
           textShadow={"md"}
           fontWeight="bold"
           textAlign={{ base: "center", md: "start" }}
@@ -52,7 +52,6 @@ const Login = () => {
         zIndex={"0"}
         sx={{ columnCount: [2, 3, 4, 5, 8], columnGap: "8px", rowGap: "10px" }}
       >
-        {" "}
         {loginMasonrys.map((img, index) => {
           return (
             <Image
@@ -67,25 +66,6 @@ const Login = () => {
           );
         })}
       </Box>
-      {/* <Grid
-        position="absolute"
-        top="0.5"
-        h="100%"
-        w="100%"
-        templateRows={"masonry"}
-        justifyContent="center"
-        gap="20px"
-        templateColumns={"repeat(auto-fill, 180px)"}
-      >
-        {" "}
-        {heroImgs.map((img, index) => {
-          return (
-            <GridItem key="index">
-              <Image src={img} key={index} alt="img" />
-            </GridItem>
-          );
-        })}
-      </Grid> */}
     </Grid>
   );
 };

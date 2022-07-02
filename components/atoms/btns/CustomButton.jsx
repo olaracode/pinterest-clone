@@ -17,7 +17,7 @@ import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 const CustomButton = ({ content, bgColor, icon, ftColor, ...props }) => {
   let bgColorHex =
     bgColor && bgColor === "main"
-      ? "#e60023"
+      ? "brand.primary.100"
       : bgColor === "secondary"
       ? "#efefef"
       : bgColor === "fb"
@@ -27,8 +27,8 @@ const CustomButton = ({ content, bgColor, icon, ftColor, ...props }) => {
   let ftColorHex = ftColor
     ? ftColor
     : bgColor === "main"
-    ? "white"
-    : bgColor === "fb" && "white";
+    ? "brand.50"
+    : bgColor === "fb" && "brand.50";
 
   let buttonIcon =
     icon && icon === "fb" ? faFacebook : icon === "gg" ? faGoogle : icon;

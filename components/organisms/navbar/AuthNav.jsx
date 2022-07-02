@@ -78,6 +78,7 @@ const AuthNav = () => {
       </Box>
       <HStack
         overflowX={"scroll"}
+        display={{ base: "flex", sm: "none" }}
         __css={{
           "&::-webkit-scrollbar": {
             display: "none",

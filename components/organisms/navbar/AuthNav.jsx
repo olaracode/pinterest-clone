@@ -43,9 +43,9 @@ const AuthNav = () => {
           <Flex align="center"></Flex>
           <Flex w="full">
             <InputGroup>
-              <InputLeftElement
+              {/* <InputLeftElement
                 children={<FontAwesomeIcon icon={faSearch} />}
-              />
+              /> */}
               <Input
                 placeholder="Search"
                 borderRadius="3xl"
@@ -85,8 +85,9 @@ const AuthNav = () => {
           },
         }}
       >
-        {UserCategories.map((category) => (
+        {UserCategories.map((category, index) => (
           <Box
+            key={index}
             p="3"
             whiteSpace={"nowrap"}
             onClick={() => setActive(category)}

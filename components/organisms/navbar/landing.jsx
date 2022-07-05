@@ -10,7 +10,8 @@ import {
   ModalContent,
   ModalCloseButton,
 } from "@chakra-ui/react";
-import { LoginCard } from "@/molecules/auth";
+import { LoginCard, RegisterCard } from "@/molecules/auth";
+
 import { CustomButton } from "@/atoms/btns";
 const Landing = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

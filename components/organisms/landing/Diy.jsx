@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, GridItem, Flex, Text, Image } from "@chakra-ui/react";
-import CustomButton from "@/atoms/btns";
+import { CustomButton } from "@/atoms/btns";
 import {
   faAngleLeft,
   faEllipsis,

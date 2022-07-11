@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Flex, Text, Grid, GridItem } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import CustomButton from "@/atoms/btns";
+import { CustomButton } from "@/atoms/btns";
 import RoundedImage from "@/atoms/RoundedImage";
 import { useRouter } from "next/router";
 const Preview = () => {

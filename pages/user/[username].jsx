@@ -5,7 +5,7 @@ import { loginMasonrys } from "@/utils/heroImgs";
 import { IconButton } from "@/atoms/btns";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 
-const index = () => {
+const UserLanding = () => {
   const router = useRouter();
   console.log(router.query);
   return (
@@ -43,4 +43,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default UserLanding;

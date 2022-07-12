@@ -28,7 +28,7 @@ const AuthNav = () => {
   useEffect(() => {
     if (!router.query.username) return;
     setUsername(router.query.username);
-  }, []);
+  }, [router.query.username]);
   return (
     <>
       <Box w="100%">

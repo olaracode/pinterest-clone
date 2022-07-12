@@ -8,7 +8,7 @@ const Navbar = () => {
   useEffect(() => {
     let splitRouter = router.asPath.split("/");
     setCurrentRoute(splitRouter[1]);
-  }, []);
+  }, [router]);
   return <>{currentRoute !== "user" ? <Landing /> : <AuthNav />}</>;
 };
 

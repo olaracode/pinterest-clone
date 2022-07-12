@@ -42,7 +42,7 @@ const Ideas = () => {
             />
           </Flex>
         </Box>
-        <Box maxW={{ base: "360px", lg: "420px" }}>
+        <Box maxW={{ base: "300px", lg: "420px" }}>
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
